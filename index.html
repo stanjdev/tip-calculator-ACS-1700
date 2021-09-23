@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="column column-left">
+      <label for="bill">Bill</label>
+      <input id="bill" type="number" min="0" placeholder="$0.00">
+      <label for="tip">Tip %</label>
+      <div class="nudge-input tip">
+        <button data-name="tip" class="decrement">-</button>
+        <input id="tip" type="number" min="0" value="15" placeholder="15%">
+        <button data-name="tip" class="increment">+</button>
+      </div>
+      <label for="num-people">Number of People</label>
+      <div class="nudge-input people">
+        <button data-name="num-people" class="decrement">-</button>
+        <input id="num-people" type="number" min="0" value="2" placeholder="1">
+        <button data-name="num-people" class="increment">+</button>
+      </div>
+    </div>
+    <div class="column column-right">
+      <div class="result">
+        <div>
+          <span>Tip</span>
+          <span>per person</span>
+        </div>
+        <span id="tip-total">$0.00</span>
+      </div>
+      <div class="result">
+        <div>
+          <span>Total</span>
+          <span>per person</span>
+        </div>
+        <span id="total">$0.00</span>
+      </div>
+    </div>
+  </section>
+  <script src="index.js"></script>
+</body>
+</html>
