@@ -1,7 +1,6 @@
 const bill = document.querySelector('#bill');
 const tip = document.querySelector('#tip');
 const numPeople = document.querySelector('#num-people');
-
 const tipTotal = document.querySelector('#tip-total');
 const total = document.querySelector('#total');
 
@@ -12,15 +11,24 @@ const buttons = document.querySelectorAll('button');
 const nudgeInputs = document.querySelectorAll('.nudge-input');
 
 // When typing numbers into inputs:
-// inputs.forEach(input => {
-//   input.addEventListener('input', e => {
-//     // console.log(e);
-//     let tipAmount = Number(bill.value * (tip.value / 100));
-//     let totalPrice = Number(tipAmount + bill.value);
-//     tipTotal.textContent = "$" + (tipAmount / numPeople.value).toFixed(2);
-//     total.textContent = "$" + (totalPrice).toFixed(2);
-//   })
-// })
+inputs.forEach(input => {
+  input.addEventListener('input', e => {
+    handleBill();
+  })
+})
+
+// // Doing each input individually:
+// bill.addEventListener('input', e => {
+//   handleBill();
+// });
+
+// tip.addEventListener('input', e => {
+//   handleBill();
+// });
+
+// numPeople.addEventListener('input', e => {
+//   handleBill();
+// });
 
 // When pressing + or - buttons:
 nudgeInputs.forEach(element => {
@@ -33,19 +41,6 @@ nudgeInputs.forEach(element => {
     handleBill();
   }
 })
-
-
-bill.addEventListener('input', e => {
-  handleBill();
-});
-
-tip.addEventListener('input', e => {
-  handleBill();
-});
-
-numPeople.addEventListener('input', e => {
-  handleBill();
-});
 
 function handleBill(e) {
   let tipAmount = Number(bill.value * (tip.value / 100));
