@@ -27,10 +27,8 @@ nudgeInputs.forEach(element => {
   element.onclick = function(e) {
     if (e.target && e.target.classList.contains('decrement')) {
       decrement(e.target.dataset.name)
-      // console.log(e.target.dataset.name)
     } else if (e.target && e.target.classList.contains('increment')) {
       increment(e.target.dataset.name)
-      // console.log(e.target.dataset.name)
     }
     handleBill();
   }
