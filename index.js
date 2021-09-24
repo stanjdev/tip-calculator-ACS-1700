@@ -28,23 +28,15 @@ function nudgeValue(inputName, action) {
 
 // When typing numbers into inputs:
 inputs.forEach(input => {
-  input.addEventListener('input', e => {
-    handleBill();
-  })
+  input.addEventListener('input', handleBill)
 })
 
 // // Doing each input individually:
-// bill.addEventListener('input', e => {
-//   handleBill();
-// });
+// bill.addEventListener('input', handleBill);
 
-// tip.addEventListener('input', e => {
-//   handleBill();
-// });
+// tip.addEventListener('input', handleBill);
 
-// numPeople.addEventListener('input', e => {
-//   handleBill();
-// });
+// numPeople.addEventListener('input', handleBill);
 
 // When pressing + or - buttons:
 nudgeInputs.forEach(element => {
