@@ -14,9 +14,6 @@ section {
   margin-top: 50px;
   width: 675px;
   height: 325px;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
@@ -35,7 +32,6 @@ section {
 }
 
 .column-right {
-  /* border: solid 1px lightskyblue; */
   grid-column: 3 / -1;
 }
 
@@ -82,8 +78,6 @@ input[type=number] {
 
 
 button {
-  /* padding: 10px; */
-  /* border-radius: 5px; */
   width: 35px;
   background-color: rgb(52, 54, 57);
   color: rgb(181,	187, 192);
@@ -91,7 +85,6 @@ button {
 
 .column-left>label {
   width: 100%;
-  /* border: lightskyblue 1px solid; */
   margin-top: 20px;
   margin-bottom: 5px;
   color: rgb(181,	187, 192);
@@ -107,7 +100,6 @@ button {
 .result>span, .result>div>:first-child {
   font-size: 2em;
   font-weight: 500;
-  /* height: 80px; */
   display: flex;
   align-items: center;
 
